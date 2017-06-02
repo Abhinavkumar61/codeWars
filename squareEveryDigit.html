@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function sqrEvryDgt(num) {
+        var result = "";
+        var len = "" + num;  // adding string with number to find the length
+        var reveseNum = len.split("").reverse().join(""); //reversing the number 
+        var num2 = parseInt(reveseNum);//converting the string into number
+
+        for (i = 0; i < len.length; i++) {
+            var number = num2 % 10;  // getting each digit of the number 
+
+            num2 = Math.floor(num2 / 10); // gives the remaining number other than last number.
+            result = result + number * number;
+        }
+        return result;
+
+    }
+    console.log("expected output ---> 9119 == 811181 Expected output ---->" + sqrEvryDgt(9119));
+    console.log("expected output ---> 2343 == 49169 Expected output ---->" + sqrEvryDgt(2343));
+    console.log("expected output ---> 4532 == 162594 Expected output ---->" + sqrEvryDgt(4532));
+
+</script>
+
+</html>

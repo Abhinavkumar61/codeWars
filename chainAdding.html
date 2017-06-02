@@ -1,0 +1,33 @@
+<html>
+    <script>
+        function add(n) {
+        var s = function(x) {
+            return add(n + x);
+        }
+        s.valueOf = function() {
+            return n;
+        }
+        return s;
+    }
+        console.log(add(1)(2)(3));
+        console.log(add(4)(5)(8));
+        
+       // another method
+        
+//        function add(a) {
+//  var currentSum = a;
+//
+//  function f(b) {
+//    currentSum += b;
+//    return f;
+//  }
+//
+//  f.toString = function() {
+//    return currentSum;
+//  }
+//
+//  return f;
+//
+//}
+        </script>
+</html>

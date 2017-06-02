@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+</body>
+<script>
+    var counselors = [
+        ["Mike", 7],
+        ["Alysa", 3]
+    ];
+    var array = [["sai", 3],
+        ["abhi", 3]]
+
+    function killcount(counselors, jason) {
+
+        var result = [];
+        for(i=0;i<counselors.length;i++){
+        if (counselors[i][1] < jason) {
+           result.push(counselors[i][0]);
+           
+        
+        }
+            
+
+    }
+        return result;
+    }
+    console.log("Expected output ---->['Alysa']  Actual output--->" + killcount(counselors, 7));
+    console.log("Expected output ---->['Alysa']  Actual output--->" + killcount(array, 7));
+    
+</script>
+
+</html>
